@@ -1,0 +1,15 @@
+import time
+
+def start_focus_timer(focus_time, break_time):
+    try:
+        while True:
+            print("专注时间开始！你有 {} 分钟的时间专注工作。".format(focus_time))
+            time.sleep(focus_time * 60)
+            print("休息一下吧！你有 {} 分钟的时间休息。".format(break_time))
+            time.sleep(break_time * 60)
+    except KeyboardInterrupt:
+        print("专注时钟已停止。")
+
+focus_minutes = int(input("请输入每次专注的分钟数："))
+break_minutes = int(input("请输入每次休息的分钟数："))
+start_focus_timer(focus_minutes, break_minutes)
